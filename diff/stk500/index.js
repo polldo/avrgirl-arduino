@@ -235,7 +235,7 @@ stk500.prototype.upload = function (stream, hex, pageSize, timeout, done) {
           cbdone();
         },
         function (cbdone) {
-          self.loadAddress(stream, useaddr, timeout, cbdone);
+          self.loadAddress(stream, useaddr + 0x200, timeout, cbdone);
         },
         function (cbdone) {
 
