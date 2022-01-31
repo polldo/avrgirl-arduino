@@ -231,11 +231,11 @@ stk500.prototype.upload = function (stream, hex, pageSize, timeout, done) {
       self.log("program page");
       async.series([
         function (cbdone) {
-          useaddr = pageaddr >> 1;
+          useaddr = pageaddr;
           cbdone();
         },
         function (cbdone) {
-          self.loadAddress(stream, useaddr + 0x200, timeout, cbdone);
+          self.loadAddress(stream, useaddr, timeout, cbdone);
         },
         function (cbdone) {
 
