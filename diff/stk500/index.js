@@ -218,7 +218,7 @@ stk500.prototype.loadPage = function (stream, writeBytes, timeout, done) {
 stk500.prototype.upload = function (stream, hex, pageSize, timeout, done) {
   this.log("program");
 
-  var pageaddr = 0;
+  var pageaddr = 0x200;
   var writeBytes;
   var useaddr;
 
